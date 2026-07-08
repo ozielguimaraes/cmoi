@@ -35,17 +35,17 @@ export default function Header() {
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
           ? 'bg-white shadow-md'
-          : 'bg-transparent'
+          : 'bg-white/10 backdrop-blur-sm border-b border-white/10'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 flex items-center gap-2 hover:opacity-80 transition">
-            <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg flex items-center justify-center">
+            <div className={`w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-purple-600 to-purple-800 rounded-lg flex items-center justify-center ${isScrolled ? '' : 'ring-2 ring-white/30'}`}>
               <span className="text-white font-bold text-sm md:text-base">C</span>
             </div>
-            <div className="text-lg md:text-xl font-bold bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
+            <div className={`text-lg md:text-xl font-bold ${isScrolled ? 'bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent' : 'text-white'}`}>
               CMOI
             </div>
           </Link>
@@ -56,7 +56,11 @@ export default function Header() {
               <a
                 key={item.label}
                 href={item.href}
-                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-purple-600 transition"
+                className={`px-3 py-2 text-sm font-medium transition ${
+                  isScrolled
+                    ? 'text-gray-700 hover:text-purple-600'
+                    : 'text-white/90 hover:text-white'
+                }`}
               >
                 {item.label}
               </a>
@@ -69,7 +73,11 @@ export default function Header() {
               href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-lg transition"
+              className={`p-2 rounded-lg transition ${
+                isScrolled
+                  ? 'text-gray-700 hover:text-pink-600 hover:bg-pink-50'
+                  : 'text-white/80 hover:text-white hover:bg-white/15'
+              }`}
               title="Instagram"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -80,14 +88,22 @@ export default function Header() {
             </a>
             <a
               href={phoneUrl}
-              className="p-2 text-gray-700 hover:bg-gray-100 rounded-lg transition"
+              className={`p-2 rounded-lg transition ${
+                isScrolled
+                  ? 'text-gray-700 hover:bg-gray-100'
+                  : 'text-white/80 hover:text-white hover:bg-white/15'
+              }`}
               title="Ligar"
             >
               <Phone className="w-5 h-5" />
             </a>
             <a
               href={whatsappUrl}
-              className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition flex items-center gap-2 text-sm font-medium"
+              className={`px-4 py-2 rounded-lg transition flex items-center gap-2 text-sm font-medium ${
+                isScrolled
+                  ? 'bg-green-600 text-white hover:bg-green-700'
+                  : 'bg-green-600 text-white hover:bg-green-700'
+              }`}
             >
               <MessageCircle className="w-4 h-4" />
               WhatsApp
@@ -101,9 +117,9 @@ export default function Header() {
             aria-label="Toggle menu"
           >
             {isOpen ? (
-              <X className="w-6 h-6 text-gray-700" />
+              <X className={`w-6 h-6 ${isScrolled ? 'text-gray-700' : 'text-white'}`} />
             ) : (
-              <Menu className="w-6 h-6 text-gray-700" />
+              <Menu className={`w-6 h-6 ${isScrolled ? 'text-gray-700' : 'text-white'}`} />
             )}
           </button>
         </div>
