@@ -27,7 +27,7 @@ export default function Hero() {
           priority
           quality={85}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/70 md:via-white/80 to-white/30" />
       </div>
 
       {/* Content */}
