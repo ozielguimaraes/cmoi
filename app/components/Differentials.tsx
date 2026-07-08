@@ -13,28 +13,28 @@ export default function Differentials() {
   ]
 
   return (
-    <section id="differentials" className="py-16 md:py-24 bg-purple-50">
+    <section id="differentials" className="py-16 md:py-24 bg-gradient-to-b from-purple-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Por Que Nos Escolher
+            Por Que Nos <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-800">Escolher</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Somos mais que uma clínica. Somos um espaço dedicado à sua saúde e bem-estar
+            Somos mais que uma clínica. Somos um espaço dedicado à sua saúde e bem-estar com excelência
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           {differentials.map(({ icon: Icon, label }) => (
             <div
               key={label}
-              className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition group"
+              className="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg hover:border-purple-300 border border-transparent transition-all duration-300 transform hover:-translate-y-1 group"
             >
               <div className="flex items-start gap-3">
-                <div className="p-2 bg-purple-100 rounded-lg group-hover:bg-purple-200 transition">
+                <div className="p-3 bg-gradient-to-br from-purple-100 to-purple-50 rounded-lg group-hover:bg-purple-200 transition">
                   <Icon className="w-6 h-6 text-purple-600" />
                 </div>
-                <h3 className="font-semibold text-gray-900 text-sm md:text-base">
+                <h3 className="font-semibold text-gray-900 text-sm md:text-base leading-snug">
                   {label}
                 </h3>
               </div>
@@ -43,22 +43,28 @@ export default function Differentials() {
         </div>
 
         {/* Additional Info */}
-        <div className="mt-12 md:mt-16 bg-white rounded-lg shadow-md p-8 md:p-12">
+        <div className="mt-12 md:mt-16 bg-gradient-to-r from-purple-600 to-purple-800 rounded-2xl shadow-lg p-8 md:p-12 text-white">
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+                <Award className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">
                 Profissionais Qualificados
               </h3>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-white/90 leading-relaxed">
                 Nossa equipe é composta por profissionais especializados e constantemente atualizados
                 nas melhores técnicas e tecnologias de odontologia e dermatologia.
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+                <Zap className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">
                 Tecnologia de Ponta
               </h3>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-white/90 leading-relaxed">
                 Investimos em equipamentos modernos e de última geração para oferecer os melhores
                 resultados com segurança e conforto para nossos pacientes.
               </p>

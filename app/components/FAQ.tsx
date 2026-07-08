@@ -18,7 +18,7 @@ export default function FAQ() {
     {
       question: 'Onde fica a clínica?',
       answer:
-        'Estamos localizados em Porto Velho, Rondônia, em uma localização de fácil acesso. Possuímos estacionamento próprio para comodidade dos pacientes.',
+        'Estamos localizados em Porto Velho, Rondônia. Nosso endereço é Porto Velho, RO - com fácil acesso e estacionamento próprio. Clique aqui para ver a localização no Google Maps: https://maps.google.com/?q=Centro+Médico+Odontológico+Integrado+Porto+Velho+RO',
     },
     {
       question: 'Quais convênios são aceitos?',
@@ -120,7 +120,23 @@ export default function FAQ() {
 
               {openIdx === idx && (
                 <div className="px-6 py-4 bg-purple-50 border-t border-purple-200">
-                  <p className="text-gray-700 leading-relaxed">{answer}</p>
+                  <p className="text-gray-700 leading-relaxed">
+                    {answer.includes('http') ? (
+                      <>
+                        {answer.split('https://')[0]}
+                        <a
+                          href={answer.split('https://')[1]?.split(' ')[0]}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-purple-600 font-semibold hover:text-purple-800 underline"
+                        >
+                          Google Maps
+                        </a>
+                      </>
+                    ) : (
+                      answer
+                    )}
+                  </p>
                 </div>
               )}
             </div>

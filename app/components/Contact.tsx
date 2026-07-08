@@ -51,14 +51,14 @@ export default function Contact() {
             href={mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition text-center group"
+            className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition text-center group hover:border-purple-300 border border-transparent"
           >
-            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition">
-              <MapPin className="w-6 h-6 text-blue-600" />
+            <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-200 transition">
+              <MapPin className="w-6 h-6 text-purple-600" />
             </div>
             <h3 className="font-bold text-gray-900 text-lg mb-2">Localização</h3>
-            <p className="text-gray-700 font-semibold">Porto Velho, RO</p>
-            <p className="text-sm text-gray-600 mt-2">Fácil acesso</p>
+            <p className="text-purple-600 font-semibold">Porto Velho, RO</p>
+            <p className="text-sm text-gray-600 mt-2">Estacionamento próprio</p>
           </a>
         </div>
 

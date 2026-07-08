@@ -43,7 +43,7 @@ export default function Hero() {
                 </span>
               </h1>
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                Odontologia e Dermatologia em um só lugar, com atendimento humanizado, profissionais qualificados e facilidade para agendar sua consulta.
+                Centro Médico Odontológico Integrado: Odontologia e Dermatologia de excelência em um só lugar. Profissionais especializados, tecnologia moderna e atendimento humanizado que você merece.
               </p>
             </div>
 
