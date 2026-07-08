@@ -22,16 +22,16 @@ export const metadata: Metadata = {
     "implante dentário Porto Velho",
     "dermatologista Porto Velho",
   ],
-  metadataBase: new URL("https://cmoi-porto-velho.com"),
+  metadataBase: new URL("https://cmoi.querc.app"),
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://cmoi-porto-velho.com",
+    url: "https://cmoi.querc.app",
     title: "Centro Médico Odontológico Integrado | Porto Velho",
     description: "Odontologia e Dermatologia premium em Porto Velho",
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: "https://cmoi-porto-velho.com" },
+  alternates: { canonical: "https://cmoi.querc.app" },
 };
 
 export default function RootLayout({
@@ -49,7 +49,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "MedicalClinic",
               name: "Centro Médico Odontológico Integrado",
-              url: "https://cmoi-porto-velho.com",
+              url: "https://cmoi.querc.app",
               telephone: "+55 69 3222-4886",
               address: {
                 "@type": "PostalAddress",
