@@ -20,14 +20,14 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1576091160550-112173f31c77?w=1200&h=800&fit=crop"
+          src="/images/clinic-interior.png"
           alt="Clínica moderna CMOI"
           fill
-          className="object-cover brightness-75"
+          className="object-cover brightness-50"
           priority
           quality={85}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/60 via-purple-900/40 to-black/30" />
       </div>
 
       {/* Content */}

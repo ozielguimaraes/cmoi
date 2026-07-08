@@ -54,7 +54,7 @@ const specialties: Specialty[] = [
     title: 'Ortodontia',
     description: 'Alinhamento perfeito do seu sorriso',
     benefits: ['Alinhamento', 'Saúde bucal', 'Estética'],
-    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=80',
+    image: '/images/orthodontics.png',
   },
   {
     id: 'aesthetic',
@@ -70,7 +70,7 @@ const specialties: Specialty[] = [
     title: 'Clínica Geral',
     description: 'Cuidados completos para sua boca',
     benefits: ['Limpeza', 'Prevenção', 'Manutenção'],
-    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=80',
+    image: '/images/general-clinic.png',
   },
   {
     id: 'dermatology-clinic',
@@ -78,7 +78,7 @@ const specialties: Specialty[] = [
     title: 'Dermatologia Clínica',
     description: 'Cuidados com sua pele',
     benefits: ['Diagnóstico', 'Tratamentos', 'Prevenção'],
-    image: 'https://images.unsplash.com/photo-1576091160550-112173f31c77?w=500&q=80',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=80',
   },
   {
     id: 'dermatology-surgery',
@@ -94,7 +94,7 @@ const specialties: Specialty[] = [
     title: 'Pequenos Procedimentos',
     description: 'Procedimentos cirúrgicos dermatológicos',
     benefits: ['Mínima invasão', 'Recuperação rápida', 'Eficaz'],
-    image: 'https://images.unsplash.com/photo-1631217314830-4875184da83c?w=500&q=80',
+    image: '/images/procedures.png',
   },
 ]
 
