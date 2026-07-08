@@ -30,7 +30,7 @@ const specialties: Specialty[] = [
     title: 'Implantes Dentários',
     description: 'Recupere seu sorriso com implantes de ponta',
     benefits: ['Fixação permanente', 'Aspecto natural', 'Função completa'],
-    image: 'https://images.unsplash.com/photo-1631217314830-4875184da83c?w=500&q=80',
+    image: '/images/general-clinic.png'
   },
   {
     id: 'prosthetics',
@@ -46,7 +46,7 @@ const specialties: Specialty[] = [
     title: 'Endodontia',
     description: 'Tratamento de canal sem dor',
     benefits: ['Preserva dente', 'Tecnologia moderna', 'Rápido'],
-    image: 'https://images.unsplash.com/photo-1631217314830-4875184da83c?w=500&q=80',
+    image: '/images/orthodontics.png',
   },
   {
     id: 'orthodontics',
@@ -62,7 +62,7 @@ const specialties: Specialty[] = [
     title: 'Dentística',
     description: 'Restaurações e clareamento dental',
     benefits: ['Brancura', 'Resistência', 'Naturalidade'],
-    image: 'https://images.unsplash.com/photo-1631217314830-4875184da83c?w=500&q=80',
+    image: '/images/orthodontics.png',
   },
   {
     id: 'general',
