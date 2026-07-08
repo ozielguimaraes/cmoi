@@ -1,10 +1,11 @@
 import Link from 'next/link'
-import { Phone, MessageCircle, Heart } from 'lucide-react'
+import { Phone, MessageCircle, Heart, Share2 } from 'lucide-react'
 
 export default function Footer() {
   const year = new Date().getFullYear()
   const whatsappUrl = 'https://wa.me/5569993157554'
   const phoneUrl = 'tel:+55693222-4886'
+  const instagramUrl = 'https://www.instagram.com/clinicacmoi/'
 
   return (
     <footer className="bg-gradient-to-b from-gray-900 to-black text-gray-300">
@@ -17,7 +18,16 @@ export default function Footer() {
             <p className="text-sm text-gray-400 mb-4">
               Centro Médico Odontológico Integrado. Odontologia e Dermatologia Premium em Porto Velho.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-3">
+              <a
+                href={instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded hover:from-purple-600 hover:to-pink-600 transition"
+                title="Instagram"
+              >
+                <Share2 className="w-5 h-5 text-white" />
+              </a>
               <a
                 href={whatsappUrl}
                 target="_blank"

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, X, Phone, MessageCircle } from 'lucide-react'
+import { Menu, X, Phone, MessageCircle, Share2 } from 'lucide-react'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,6 +18,7 @@ export default function Header() {
 
   const whatsappUrl = 'https://wa.me/5569993157554?text=Olá! Gostaria de agendar uma consulta.'
   const phoneUrl = 'tel:+55693222-4886'
+  const instagramUrl = 'https://www.instagram.com/clinicacmoi/'
 
   const menuItems = [
     { label: 'Início', href: '#hero' },
@@ -65,6 +66,15 @@ export default function Header() {
           {/* CTA Buttons */}
           <div className="hidden md:flex gap-3 items-center">
             <a
+              href={instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition"
+              title="Instagram"
+            >
+              <Share2 className="w-5 h-5" />
+            </a>
+            <a
               href={phoneUrl}
               className="p-2 text-gray-700 hover:bg-gray-100 rounded-lg transition"
               title="Ligar"
@@ -109,6 +119,14 @@ export default function Header() {
                 </a>
               ))}
               <div className="px-3 py-2 pt-4 border-t border-gray-200 space-y-2">
+                <a
+                  href={instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition text-center font-medium"
+                >
+                  📷 Instagram
+                </a>
                 <a
                   href={phoneUrl}
                   className="block w-full px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition text-center font-medium"
