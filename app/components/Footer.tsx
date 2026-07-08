@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Phone, MessageCircle, Heart } from 'lucide-react'
+import { Container } from './ui/Container'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -8,9 +9,8 @@ export default function Footer() {
   const instagramUrl = 'https://www.instagram.com/clinicacmoi/'
 
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-black text-gray-300">
-      {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <footer className="bg-gray-900 text-gray-300">
+      <Container className="py-12 md:py-16">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
@@ -23,7 +23,7 @@ export default function Footer() {
                 href={instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded hover:from-purple-600 hover:to-pink-600 transition"
+                className="p-2 bg-purple-600 rounded hover:bg-purple-700 transition"
                 title="Instagram"
               >
                 <svg className="w-5 h-5 text-white" fill="white" viewBox="0 0 24 24">
@@ -135,8 +135,8 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-8 mt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-gray-400 mb-4 md:mb-0">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-gray-400">
               &copy; {year} Centro Médico Odontológico Integrado. Todos os direitos reservados.
             </p>
             <div className="flex gap-6 text-sm">
@@ -149,14 +149,13 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Heart */}
           <p className="text-center text-sm text-gray-500 mt-6 flex items-center justify-center gap-2">
             Feito com
             <Heart className="w-4 h-4 text-red-500 fill-red-500" />
             para sua saúde
           </p>
         </div>
-      </div>
+      </Container>
     </footer>
   )
 }

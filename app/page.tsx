@@ -5,7 +5,6 @@ import Specialties from './components/Specialties'
 import Differentials from './components/Differentials'
 import HowItWorks from './components/HowItWorks'
 import Gallery from './components/Gallery'
-import Testimonials from './components/Testimonials'
 import Convenios from './components/Convenios'
 import FAQ from './components/FAQ'
 import CTAFinal from './components/CTAFinal'
@@ -23,7 +22,6 @@ export default function Home() {
       <Differentials />
       <HowItWorks />
       <Gallery />
-      <Testimonials />
       <Convenios />
       <FAQ />
       <CTAFinal />

@@ -1,43 +1,36 @@
-import { Check, Phone, MessageCircle } from 'lucide-react'
+import { Phone, MessageCircle, Building2 } from 'lucide-react'
+import { Card } from './ui/Card'
+import { SectionHeading } from './ui/SectionHeading'
+import { Button } from './ui/Button'
+import { Container } from './ui/Container'
 
 export default function Convenios() {
   const convenios = [
-    { name: 'CASSI', icon: '🏥' },
-    { name: 'FUSEX', icon: '🛡️' },
-    { name: 'Zequinha Araújo', icon: '✨' },
+    { name: 'CASSI', icon: Building2 },
+    { name: 'FUSEX', icon: Building2 },
+    { name: 'Zequinha Araújo', icon: Building2 },
   ]
 
   const whatsappUrl = 'https://wa.me/5569993157554?text=Gostaria%20de%20consultar%20sobre%20outros%20convênios'
   const phoneUrl = 'tel:+55693222-4886'
 
   return (
-    <section id="convenios" className="py-16 md:py-24 bg-gradient-to-b from-purple-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-800">Convênios Aceitos</span>
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Trabalhamos com os principais convênios de Porto Velho para facilitar seu acesso
-          </p>
-        </div>
+    <section id="convenios" className="py-16 md:py-24 bg-white">
+      <Container>
+        <SectionHeading
+          title="Convênios Aceitos"
+          subtitle="Trabalhamos com os principais convênios de Porto Velho para facilitar seu acesso"
+        />
 
-        <div className="grid md:grid-cols-3 gap-6 mb-10">
-          {convenios.map(({ name, icon }) => (
-            <div
-              key={name}
-              className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group border border-purple-100 hover:border-purple-300"
-            >
-              <div className="text-4xl mb-4 text-center group-hover:scale-110 transition-transform">
-                {icon}
-              </div>
-              <p className="text-xl font-bold text-gray-900 text-center">
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          {convenios.map(({ name, icon: Icon }) => (
+            <Card key={name} className="p-8 text-center flex flex-col items-center gap-4">
+              <Icon className="w-12 h-12 text-purple-600" />
+              <p className="text-xl font-bold text-gray-900">
                 {name}
               </p>
-              <div className="mt-4 pt-4 border-t border-purple-100">
-                <p className="text-xs text-purple-600 text-center font-semibold">✓ Aceito</p>
-              </div>
-            </div>
+              <div className="text-sm text-purple-600 font-semibold">✓ Aceito</div>
+            </Card>
           ))}
         </div>
 
@@ -55,26 +48,30 @@ export default function Convenios() {
 
             {/* Contact Options */}
             <div className="flex flex-col gap-3">
-              <a
+              <Button
                 href={phoneUrl}
-                className="flex items-center gap-3 bg-white/20 hover:bg-white/30 px-6 py-3 rounded-lg transition font-semibold"
+                variant="ghost"
+                size="md"
+                className="bg-white/20 hover:bg-white/30 text-white justify-start"
               >
                 <Phone className="w-5 h-5" />
                 (69) 3222-4886
-              </a>
-              <a
+              </Button>
+              <Button
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 bg-green-500 hover:bg-green-600 px-6 py-3 rounded-lg transition font-semibold"
+                variant="whatsapp"
+                size="md"
+                className="justify-start"
               >
                 <MessageCircle className="w-5 h-5" />
                 WhatsApp
-              </a>
+              </Button>
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

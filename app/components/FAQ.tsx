@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
+import { SectionHeading } from './ui/SectionHeading'
+import { Container } from './ui/Container'
 
 interface FAQItem {
   question: string
@@ -85,16 +87,12 @@ export default function FAQ() {
   const [openIdx, setOpenIdx] = useState<number | null>(null)
 
   return (
-    <section id="faq" className="py-16 md:py-24 bg-white">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Perguntas Frequentes
-          </h2>
-          <p className="text-lg text-gray-600">
-            Encontre respostas para suas dúvidas
-          </p>
-        </div>
+    <section id="faq" className="py-16 md:py-24 bg-gray-50">
+      <Container className="max-w-3xl">
+        <SectionHeading
+          title="Perguntas Frequentes"
+          subtitle="Encontre respostas para suas dúvidas"
+        />
 
         <div className="space-y-3">
           {faqs.map(({ question, answer }, idx) => (
@@ -142,7 +140,7 @@ export default function FAQ() {
             </div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

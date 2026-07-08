@@ -1,4 +1,7 @@
 import { CheckCircle, Heart, Award, Zap, Users, Home } from 'lucide-react'
+import { Card } from './ui/Card'
+import { SectionHeading } from './ui/SectionHeading'
+import { Container } from './ui/Container'
 
 export default function Differentials() {
   const differentials = [
@@ -13,37 +16,28 @@ export default function Differentials() {
   ]
 
   return (
-    <section id="differentials" className="py-16 md:py-24 bg-gradient-to-b from-purple-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Por Que Nos <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-800">Escolher</span>
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Somos mais que uma clínica. Somos um espaço dedicado à sua saúde e bem-estar com excelência
-          </p>
-        </div>
+    <section id="differentials" className="py-16 md:py-24 bg-white">
+      <Container>
+        <SectionHeading
+          title={<>Por Que Nos <span className="text-purple-600">Escolher</span></>}
+          subtitle="Somos mais que uma clínica. Somos um espaço dedicado à sua saúde e bem-estar com excelência"
+        />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
           {differentials.map(({ icon: Icon, label }) => (
-            <div
-              key={label}
-              className="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg hover:border-purple-300 border border-transparent transition-all duration-300 transform hover:-translate-y-1 group"
-            >
-              <div className="flex items-start gap-3">
-                <div className="p-3 bg-gradient-to-br from-purple-100 to-purple-50 rounded-lg group-hover:bg-purple-200 transition">
-                  <Icon className="w-6 h-6 text-purple-600" />
-                </div>
-                <h3 className="font-semibold text-gray-900 text-sm md:text-base leading-snug">
-                  {label}
-                </h3>
+            <Card key={label} className="p-6 flex items-start gap-3">
+              <div className="p-3 bg-purple-100 rounded-lg flex-shrink-0">
+                <Icon className="w-6 h-6 text-purple-600" />
               </div>
-            </div>
+              <h3 className="font-semibold text-gray-900 text-sm md:text-base leading-snug">
+                {label}
+              </h3>
+            </Card>
           ))}
         </div>
 
-        {/* Additional Info */}
-        <div className="mt-12 md:mt-16 bg-gradient-to-r from-purple-600 to-purple-800 rounded-2xl shadow-lg p-8 md:p-12 text-white">
+        {/* Featured Benefits */}
+        <div className="bg-gradient-to-r from-purple-600 to-purple-800 rounded-2xl shadow-lg p-8 md:p-12 text-white">
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
@@ -71,7 +65,7 @@ export default function Differentials() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

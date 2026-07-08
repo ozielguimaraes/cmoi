@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import {
   Lightbulb,
   Crown,
@@ -12,7 +11,10 @@ import {
   Heart,
   Sparkle,
 } from 'lucide-react'
-import { useState } from 'react'
+import { Card } from './ui/Card'
+import { SectionHeading } from './ui/SectionHeading'
+import { Button } from './ui/Button'
+import { Container } from './ui/Container'
 
 interface Specialty {
   id: string
@@ -20,7 +22,6 @@ interface Specialty {
   title: string
   description: string
   benefits: string[]
-  image: string
 }
 
 const specialties: Specialty[] = [
@@ -30,7 +31,6 @@ const specialties: Specialty[] = [
     title: 'Implantes Dentários',
     description: 'Recupere seu sorriso com implantes de ponta',
     benefits: ['Fixação permanente', 'Aspecto natural', 'Função completa'],
-    image: '/images/general-clinic.png'
   },
   {
     id: 'prosthetics',
@@ -38,7 +38,6 @@ const specialties: Specialty[] = [
     title: 'Próteses',
     description: 'Soluções personalizadas para seu sorriso',
     benefits: ['Conforto', 'Estética', 'Durabilidade'],
-    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=80',
   },
   {
     id: 'endodontics',
@@ -46,7 +45,6 @@ const specialties: Specialty[] = [
     title: 'Endodontia',
     description: 'Tratamento de canal sem dor',
     benefits: ['Preserva dente', 'Tecnologia moderna', 'Rápido'],
-    image: '/images/orthodontics.png',
   },
   {
     id: 'orthodontics',
@@ -54,7 +52,6 @@ const specialties: Specialty[] = [
     title: 'Ortodontia',
     description: 'Alinhamento perfeito do seu sorriso',
     benefits: ['Alinhamento', 'Saúde bucal', 'Estética'],
-    image: '/images/orthodontics.png',
   },
   {
     id: 'aesthetic',
@@ -62,7 +59,6 @@ const specialties: Specialty[] = [
     title: 'Dentística',
     description: 'Restaurações e clareamento dental',
     benefits: ['Brancura', 'Resistência', 'Naturalidade'],
-    image: '/images/orthodontics.png',
   },
   {
     id: 'general',
@@ -70,7 +66,6 @@ const specialties: Specialty[] = [
     title: 'Clínica Geral',
     description: 'Cuidados completos para sua boca',
     benefits: ['Limpeza', 'Prevenção', 'Manutenção'],
-    image: '/images/general-clinic.png',
   },
   {
     id: 'dermatology-clinic',
@@ -78,7 +73,6 @@ const specialties: Specialty[] = [
     title: 'Dermatologia Clínica',
     description: 'Cuidados com sua pele',
     benefits: ['Diagnóstico', 'Tratamentos', 'Prevenção'],
-    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=80',
   },
   {
     id: 'dermatology-surgery',
@@ -86,7 +80,6 @@ const specialties: Specialty[] = [
     title: 'Dermatologia Cirúrgica',
     description: 'Procedimentos dermatológicos avançados',
     benefits: ['Precisão', 'Segurança', 'Resultados'],
-    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=80',
   },
   {
     id: 'procedures',
@@ -94,63 +87,41 @@ const specialties: Specialty[] = [
     title: 'Pequenos Procedimentos',
     description: 'Procedimentos cirúrgicos dermatológicos',
     benefits: ['Mínima invasão', 'Recuperação rápida', 'Eficaz'],
-    image: '/images/procedures.png',
   },
 ]
 
 export default function Specialties() {
   const whatsappUrl = 'https://wa.me/5569993157554?text=Olá! Gostaria de agendar uma avaliação.'
 
-  const [hoveredId, setHoveredId] = useState<string | null>(null)
-
   return (
     <section id="specialties" className="py-16 md:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Nossas Especialidades
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Oferecemos um completo leque de serviços odontológicos e dermatológicos para sua saúde e bem-estar
-          </p>
-        </div>
+      <Container>
+        <SectionHeading
+          title="Nossas Especialidades"
+          subtitle="Oferecemos um completo leque de serviços odontológicos e dermatológicos para sua saúde e bem-estar"
+        />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {specialties.map((specialty) => {
             const Icon = specialty.icon
             return (
-              <div
-                key={specialty.id}
-                className="group bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300"
-                onMouseEnter={() => setHoveredId(specialty.id)}
-                onMouseLeave={() => setHoveredId(null)}
-              >
-                {/* Image */}
-                <div className="relative h-40 overflow-hidden bg-gray-200">
-                  <Image
-                    src={specialty.image}
-                    alt={specialty.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
+              <Card key={specialty.id} className="flex flex-col">
+                {/* Icon Header */}
+                <div className="p-6 bg-purple-50 border-b border-gray-200">
+                  <Icon className="w-10 h-10 text-purple-600" />
                 </div>
 
                 {/* Content */}
-                <div className="p-6 space-y-3">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <h3 className="text-lg font-bold text-gray-900 mb-2">
-                        {specialty.title}
-                      </h3>
-                      <p className="text-sm text-gray-600 mb-3">
-                        {specialty.description}
-                      </p>
-                    </div>
-                    <Icon className="w-6 h-6 text-purple-600 flex-shrink-0" />
-                  </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    {specialty.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 mb-4">
+                    {specialty.description}
+                  </p>
 
                   {/* Benefits */}
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 mb-6 flex-1">
                     {specialty.benefits.map((benefit) => (
                       <li
                         key={benefit}
@@ -163,20 +134,22 @@ export default function Specialties() {
                   </ul>
 
                   {/* CTA Button */}
-                  <a
+                  <Button
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-4 w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-purple-700 text-white font-medium rounded-lg hover:shadow-lg transition text-center text-sm"
+                    variant="whatsapp"
+                    size="md"
+                    className="w-full text-center"
                   >
                     Agendar Avaliação
-                  </a>
+                  </Button>
                 </div>
-              </div>
+              </Card>
             )
           })}
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

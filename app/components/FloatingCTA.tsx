@@ -20,7 +20,7 @@ export default function FloatingCTA() {
 
   return (
     <>
-      {/* Desktop: Show both buttons */}
+      {/* Desktop */}
       <div className="hidden md:flex fixed bottom-8 right-8 gap-3 z-40 flex-col">
         <a
           href={whatsappUrl}
@@ -40,7 +40,7 @@ export default function FloatingCTA() {
         </a>
       </div>
 
-      {/* Mobile: Show WhatsApp button only */}
+      {/* Mobile */}
       <div className="md:hidden fixed bottom-8 right-8 z-40">
         <a
           href={whatsappUrl}
