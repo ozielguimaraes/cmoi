@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, X, Phone, MessageCircle, Share2 } from 'lucide-react'
+import { Menu, X, Phone, MessageCircle } from 'lucide-react'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -69,10 +69,14 @@ export default function Header() {
               href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition"
+              className="p-2 text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-lg transition"
               title="Instagram"
             >
-              <Share2 className="w-5 h-5" />
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" strokeWidth="2"/>
+                <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" strokeWidth="2"/>
+                <circle cx="17" cy="7" r="0.75" fill="currentColor"/>
+              </svg>
             </a>
             <a
               href={phoneUrl}
@@ -123,9 +127,14 @@ export default function Header() {
                   href={instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition text-center font-medium"
+                  className="block w-full px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition text-center font-medium flex items-center justify-center gap-2"
                 >
-                  📷 Instagram
+                  <svg className="w-5 h-5" fill="white" viewBox="0 0 24 24">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" strokeWidth="2"/>
+                    <circle cx="12" cy="12" r="3" fill="none" stroke="white" strokeWidth="2"/>
+                    <circle cx="17" cy="7" r="0.75" fill="white"/>
+                  </svg>
+                  Instagram
                 </a>
                 <a
                   href={phoneUrl}

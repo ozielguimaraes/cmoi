@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Phone, MessageCircle, Heart, Share2 } from 'lucide-react'
+import { Phone, MessageCircle, Heart } from 'lucide-react'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -26,7 +26,11 @@ export default function Footer() {
                 className="p-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded hover:from-purple-600 hover:to-pink-600 transition"
                 title="Instagram"
               >
-                <Share2 className="w-5 h-5 text-white" />
+                <svg className="w-5 h-5 text-white" fill="white" viewBox="0 0 24 24">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" strokeWidth="2"/>
+                  <circle cx="12" cy="12" r="3" fill="none" stroke="white" strokeWidth="2"/>
+                  <circle cx="17" cy="7" r="0.75" fill="white"/>
+                </svg>
               </a>
               <a
                 href={whatsappUrl}

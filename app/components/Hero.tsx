@@ -20,14 +20,14 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1631217314830-4875184da83c?w=1200&h=800&fit=crop"
-          alt="Clínica moderna com profissionais"
+          src="https://images.unsplash.com/photo-1576091160550-112173f31c77?w=1200&h=800&fit=crop"
+          alt="Clínica moderna CMOI"
           fill
-          className="object-cover"
+          className="object-cover brightness-75"
           priority
           quality={85}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/70 md:via-white/80 to-white/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-black/10" />
       </div>
 
       {/* Content */}
@@ -36,13 +36,13 @@ export default function Hero() {
           {/* Left Content */}
           <div className="space-y-6">
             <div className="space-y-3">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Sua saúde e seu sorriso merecem{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-800">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-purple-200">
                   atendimento especializado
                 </span>
               </h1>
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed">
                 Centro Médico Odontológico Integrado: Odontologia e Dermatologia de excelência em um só lugar. Profissionais especializados, tecnologia moderna e atendimento humanizado que você merece.
               </p>
             </div>
@@ -80,8 +80,8 @@ export default function Hero() {
             </div>
 
             {/* Info Box */}
-            <div className="bg-white/90 backdrop-blur p-4 rounded-lg border border-purple-200">
-              <p className="text-sm text-gray-700">
+            <div className="bg-white/95 backdrop-blur p-4 rounded-lg shadow-lg">
+              <p className="text-sm text-gray-900">
                 <span className="font-semibold text-purple-600">✔ Atendimento Particular</span> •{' '}
                 <span className="font-semibold text-purple-600">✔ Convênios</span> •{' '}
                 <span className="font-semibold text-purple-600">✔ Porto Velho - RO</span>
