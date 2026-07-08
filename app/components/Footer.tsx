@@ -114,7 +114,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <p className="text-gray-500">Porto Velho, RO</p>
+                <p className="text-gray-500 text-xs">Av. José Vieira Caúla, 3842<br />Nova Porto Velho, RO 76820-148</p>
               </li>
             </ul>
           </div>

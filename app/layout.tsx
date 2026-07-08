@@ -53,8 +53,10 @@ export default function RootLayout({
               telephone: "+55 69 3222-4886",
               address: {
                 "@type": "PostalAddress",
+                streetAddress: "Av. José Vieira Caúla, 3842",
                 addressLocality: "Porto Velho",
                 addressRegion: "RO",
+                postalCode: "76820-148",
                 addressCountry: "BR",
               },
             }),

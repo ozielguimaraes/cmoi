@@ -3,7 +3,7 @@ import { Phone, MessageCircle, MapPin, Clock } from 'lucide-react'
 export default function Contact() {
   const phoneUrl = 'tel:+55693222-4886'
   const whatsappUrl = 'https://wa.me/5569993157554'
-  const mapsUrl = 'https://maps.google.com/?q=Porto+Velho,+Rondônia'
+  const mapsUrl = 'https://maps.google.com/?q=Av.+José+Vieira+Caúla,+3842,+Nova+Porto+Velho,+Porto+Velho,+RO,+76820-148'
 
   return (
     <section id="contact" className="py-16 md:py-24 bg-gray-50">
@@ -57,8 +57,9 @@ export default function Contact() {
               <MapPin className="w-6 h-6 text-purple-600" />
             </div>
             <h3 className="font-bold text-gray-900 text-lg mb-2">Localização</h3>
-            <p className="text-purple-600 font-semibold">Porto Velho, RO</p>
-            <p className="text-sm text-gray-600 mt-2">Estacionamento próprio</p>
+            <p className="text-purple-600 font-semibold text-sm">Av. José Vieira Caúla, 3842</p>
+            <p className="text-sm text-gray-600 mt-2">Nova Porto Velho - RO</p>
+            <p className="text-xs text-gray-500">CEP: 76820-148</p>
           </a>
         </div>
 

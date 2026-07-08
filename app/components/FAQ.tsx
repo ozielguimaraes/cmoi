@@ -18,7 +18,7 @@ export default function FAQ() {
     {
       question: 'Onde fica a clínica?',
       answer:
-        'Estamos localizados em Porto Velho, Rondônia. Nosso endereço é Porto Velho, RO - com fácil acesso e estacionamento próprio. Clique aqui para ver a localização no Google Maps: https://maps.google.com/?q=Centro+Médico+Odontológico+Integrado+Porto+Velho+RO',
+        'Av. José Vieira Caúla, 3842 - Nova Porto Velho, Porto Velho - RO, 76820-148. Estacionamento próprio e fácil acesso. Clique aqui para ver a localização no Google Maps: https://maps.google.com/?q=Av.+José+Vieira+Caúla,+3842,+Nova+Porto+Velho,+Porto+Velho,+RO,+76820-148',
     },
     {
       question: 'Quais convênios são aceitos?',
